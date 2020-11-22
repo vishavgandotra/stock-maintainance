@@ -1,3 +1,7 @@
+import {Product} from './Product.js';
+import {prepareProductCard} from './domRender.js';
+import {ValidationError} from './ErrorHandling.js';
+
 fetch("/json/data.json")
     .then( (response) => response.json())
     .catch(() => alert("Please check your connection"))
@@ -13,32 +17,6 @@ fetch("/json/data.json")
     .catch( () => alert("Unable to get prducts, please try again"));   
     
 
-class Product{
-    #price = 0;
-    constructor(name, image, price){
-        this._name = name;
-        this._img = image;
-        this.#price = price;
-    }
-    get name(){
-        return this._name;
-    }
-    get img(){
-        return this._img;
-    }
-    get price(){
-        return this.#price;
-    }
-}
-
-let caseMixin = {
-    upperCaseAndBold(){
-        return this.name.toUpperCase().bold();
-    }
-}
-
-Object.assign(Product.prototype, caseMixin);
-
 let prepareProductObject = (jsonObj) => {
     let name, img, price;
     
@@ -49,35 +27,29 @@ let prepareProductObject = (jsonObj) => {
 
 };
 
-let prepareProductCard = (object) => {
-   let mainDiv = document.getElementById("savedProducts");
-   if(mainDiv){
-       let div = createElement("div");
-       div.className = "col-3 custom-card";
-       div.appendChild(prepareNameImgDiv(object));
-        div.appendChild(preparePriceDiv(object));
-        mainDiv.appendChild(div);
-   }
-}; 
 
-let createElement = (element) => document.createElement(element);
-
-function prepareNameImgDiv(object){
-    let outerDiv = createElement("div");
-    let nameDIv = createElement("div");
-
-    let img = createElement("IMG");
-    img.setAttribute("src", object.img);
-
-    nameDIv.innerHTML = object.upperCaseAndBold();
-    outerDiv.appendChild(nameDIv);
-    outerDiv.appendChild(img);
-    return outerDiv;
+//submit form
+function addNewProduct(){
+    let name = document.getElementById("name").value;
+    document.getElementById("name").value='';
+    if(validateForm(name)){
+        let product = new Product(name);
+        prepareProductCard(product);
+    } 
 }
 
-function preparePriceDiv(object){
-    let priceDiv = createElement("div");
-    priceDiv.innerHTML = object.price;
 
-    return priceDiv;
-}
+
+let validateForm = (name) => {
+    try {
+        if(!name || name == '')
+            throw new ValidationError("Enter Name");
+        else if(!name.match(/^[A-Za-z]*$/)){
+            throw new ValidationError("ENter valid Name");
+        }
+        else 
+            return true;
+    } catch (error) {
+        alert(error.message);        
+    }
+};
