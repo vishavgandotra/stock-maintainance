@@ -38,6 +38,7 @@ function addNewProduct(){
     } 
 }
 
+document.querySelector('input[type="button"]').addEventListener('click', addNewProduct);
 
 
 let validateForm = (name) => {

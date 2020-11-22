@@ -12,3 +12,19 @@ img{
     display: flex;
     justify-content: space-between;
 }
+body{
+ /*    background-image: url('https://image.freepik.com/free-vector/white-background-with-hexagonal-line-pattern-design_1017-28442.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+}
+.b-white{
+    background-color: whitesmoke;
+}
+.inner-div>div{
+    height: 100vh;
+}
+#savedProducts{
+    height: 90%;
+    overflow-y: auto;
+}

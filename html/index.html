@@ -11,20 +11,30 @@
         <link rel="stylesheet" href="/css/main.css">
     </head>
      <body>
-         <div class="container">
-            <h1>Add Product to stock</h1> 
-            <form class="container">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control"/> 
-                </div>  
-                
-                <div class="form-group">                   
-                    <input type="button" value="submit" onclick="addNewProduct()" class="form-control btn btn-primary"/> 
-                </div>   
-            </form>
-         </div>
-         <div id="savedProducts" class="row mt-5 mx-3 ">
+         <div class="d-flex inner-div">
+            <div class="col-4 b-white d-flex" >
+                <div class="align-self-center">
+                    <h1>Add Product to stock</h1> 
+                    <form class="container">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control"/> 
+                        </div>  
+                        
+                        <div class="form-group">                   
+                            <input type="button" value="submit"  class="form-control btn btn-primary"/> 
+                        </div>   
+                    </form>
+                </div>
+               
+            </div>
+            <div class="px-3">
+                <h1>Products</h1>
+                <div id="savedProducts" class="row  col-10 "> 
+              
+                </div>
+            </div>
+            
          </div>
      </body>
      <script src="/js files/main.js" type="module"></script>
