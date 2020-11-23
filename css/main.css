@@ -5,12 +5,19 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
 }
 .custom-card{
     border: 3px solid rgba(80, 79, 79, 0.548);
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-height: 12rem;
 }
 body{
  /*    background-image: url('https://image.freepik.com/free-vector/white-background-with-hexagonal-line-pattern-design_1017-28442.jpg');
@@ -25,6 +32,6 @@ body{
     height: 100vh;
 }
 #savedProducts{
-    height: 90%;
     overflow-y: auto;
+    max-height: 90%;
 }
