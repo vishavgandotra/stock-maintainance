@@ -2,7 +2,7 @@ import {Product} from './Product.js';
 import {prepareProductCard} from './domRender.js';
 import {ValidationError} from './ErrorHandling.js';
 
-fetch("/json/data.json")
+fetch("./json/data.json")
     .then( (response) => response.json())
     .catch(() => alert("Please check your connection"))
     .then( jsonArr => {
