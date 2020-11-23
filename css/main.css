@@ -1,37 +1,57 @@
-.border-solid{
-    border: 3px solid rgba(80, 79, 79, 0.548);
+.border-solid {
+  border: 3px solid rgba(80, 79, 79, 0.548);
 }
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-.custom-card{
-    border: 3px solid rgba(80, 79, 79, 0.548);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    min-height: 12rem;
-}
-body{
- /*    background-image: url('https://image.freepik.com/free-vector/white-background-with-hexagonal-line-pattern-design_1017-28442.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
 
+.custom-card {
+  border: 3px solid rgba(80, 79, 79, 0.548);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  min-height: 12rem;
 }
-.b-white{
-    background-color: whitesmoke;
+
+.custom-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 60%;
 }
-.inner-div>div{
-    height: 100vh;
+
+.custom-card div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-#savedProducts{
-    overflow-y: auto;
-    max-height: 90%;
+
+.b-white {
+  background-color: whitesmoke;
 }
+
+.inner-div > div {
+  height: 100vh;
+}
+
+#savedProducts {
+  overflow-y: auto;
+  max-height: 90%;
+}
+/*# sourceMappingURL=main.css.map */

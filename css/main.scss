@@ -1,0 +1,56 @@
+$padding1rem: 1rem;
+
+@mixin greySolidBorder {
+    border: 3px solid rgba(80, 79, 79, 0.548);
+}
+
+@mixin flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin marginAuto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin py-1 {
+    padding-top: $padding1rem;
+    padding-bottom: $padding1rem;
+}
+
+.border-solid{
+    @include greySolidBorder();
+}
+
+.custom-card{
+    @include greySolidBorder();
+    @include flexSpaceBetween();
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    @include py-1();
+    min-height: 12rem;
+    img{
+        display: block;
+        @include marginAuto();
+        @include py-1();
+        width: 60%;
+    }
+    div{
+        @include flexSpaceBetween();
+        flex-direction: column;
+    }
+}
+
+.b-white{
+    background-color: whitesmoke;
+}
+.inner-div>div{
+    height: 100vh;
+}
+#savedProducts{
+    overflow-y: auto;
+    max-height: 90%;
+}

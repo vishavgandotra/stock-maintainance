@@ -45,7 +45,7 @@ let validateForm = (name) => {
     try {
         if(!name || name == '')
             throw new ValidationError("Enter Name");
-        else if(!name.match(/^[A-Za-z]*$/)){
+        else if(!name.match(/^[A-Za-z]*[A-Za-z ]*$/)){
             throw new ValidationError("ENter valid Name");
         }
         else 
